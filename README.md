@@ -23,6 +23,7 @@
 
 ## groupsテーブル
 |Column|Type|Options|
+|------|----|-------|
 |groups|string|null: false|
 ### Association
 - has_many :messages
