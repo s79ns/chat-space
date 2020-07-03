@@ -1,0 +1,36 @@
+.chat-main
+  .main-header
+    .main-header__group
+      %p.main-header__group__name
+        桜を見る会
+      %ul.main-header__group__member
+        Member：
+        %li.main-header__member__list
+        abe
+    .main-header__edit
+      %a.main-header__edit__box
+      = link_to "Edit", "#"
+  .messages
+    .messages__box
+      .messages__box__intro
+        .messages__box__intro__name
+          abe
+        .messages__box__intro__date
+          2020年7年3日(金) 16:41:03
+    .messages__coments
+      桜を見るかい！？
+    .messages__box__intro
+      .messages__box__intro__name
+        名無し
+      .messages__box__intro__date
+        2020年7年3日(金) 16:57:35
+    .messages__coments
+      いいですね！
+  .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "Send"}
