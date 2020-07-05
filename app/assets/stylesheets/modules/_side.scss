@@ -34,6 +34,10 @@
       text-decoration: none;
       box-sizing: border-box;
       padding: 20px 0 40px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
       &__name {
         font-size: 15px;
       }

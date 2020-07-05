@@ -5,14 +5,16 @@
         = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__edit-user
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.side-header__box__new-group
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .groups
-    .group
-      .group__name
-        桜を見る会
-      .group__message
-        まだメッセージはありません。
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません
