@@ -41,46 +41,44 @@
         font-size: 14px;
       }
     }
-    .form {
-      background-color: #dddddd;
-      height: 90px;
-      padding: 20px 50px 20px 40px;
-      box-sizing: border-box;
-
-      form {
-        display: flex;
-        .input-box {
-          display: flex;
-          width: 100%;
-          position: relative;
-          &__text {
-            height: 50px;
-            width: 100%;
-            color: #434a54;
-            border-style: none;
-            padding: 0 45px 0 15px;
-          }
-          &__image {
-            position: absolute;
-            top: 6px;
-            right: 10px;
-            font-size: 25px;
-            &__file {
-              display: none;
-            }
-          }
-        }
-      }
-      .submit-btn {
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        border-style: none;
+}    
+.Form {
+  background-color: #dddddd;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  &__message {
+    width: 100%;
+   
+    position: relative;
+    .Form__inputContent {
+      height: 50px;
+      width: 100%;
+      color: #434a54;
+      border-style: none;
+      padding: 0 45px 0 15px;
+    }
+    .Form__inputImage {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      font-size: 25px;
+      .Hidden {
+        display: none;
       }
     }
-}    
+  }
+  .Form__submit {
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    border-style: none;
+  }
+}
 
 .main-header {
   height: 100px;
