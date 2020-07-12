@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="messages__box">
+        `<div class="messages__box" data-message-id=${message.id}>
           <div class="messages__box__intro">
             <div class="messages__intro__name">
               ${message.user_name}
@@ -11,7 +11,7 @@ $(function(){
               ${message.created_at}
             </div>
           </div>
-          <div class="messages__box">
+          <div class="messages__coments">
             <p class="message.content">
               ${message.content}
             </p>
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="messages__box">
+      `<div class="messages__box" data-message-id=${message.id}>
         <div class="messages__box__intro">
           <div class="messages__box__intro__name">
             ${message.user_name}
@@ -43,7 +43,7 @@ $(function(){
   $('.Form').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
-    let url = $(this).attr('action')
+    let url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -61,6 +61,7 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $('.Form__submit').prop("disabled", false);
     });
   });
 });
